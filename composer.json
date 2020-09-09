@@ -1,0 +1,19 @@
+{
+	"name": "we2l/i7bank",
+	"description": "I7Bank Digital",
+	"minimum-stability": "stable",
+	"authors": [{
+		"name": "Weslley Araujo",
+
+		"email": "weslleyadesousa@gmail.com",
+		"role": "Developer"
+	}],
+	"config": {
+		"vendor-lib": "vendor"
+	},
+	"autoload": {
+		"psr-4": {
+			"classes\\": "classes/"
+		}
+	}
+}

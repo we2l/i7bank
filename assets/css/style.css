@@ -1,0 +1,754 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+}
+
+:root {
+    --main-clor: #0D0D0D;
+    --text-color: #F2F2F2;
+}
+
+.container-flex {
+    display: flex;
+    width: 90% ;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.header-index {
+    background-color: var(--main-clor);
+    height: 100px;
+    display: block;
+}
+
+.container-header {
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.header-index .logo {
+    font-size: 32px;
+}
+
+.header-index nav ul{
+    display: flex;
+}
+
+.header-index nav ul li {
+    margin-left: 57px;
+    font-size: 20px;
+}
+
+.header-index nav ul li::after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 3px;
+    transition: width .3s;
+    background-color: #D9A91A;
+}
+
+.header-index nav ul li:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+
+.buttons-header, .buttons-header .login {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+.buttons-header .login {
+    margin-right: 22px;
+}
+
+.buttons-header .login a {
+    margin-right: 12px;
+}
+
+.buttons-header .open-account {
+    background-color: #FFB100;
+    padding: 8px 16px;
+    border-radius: 10px;
+    color: var(--main-clor);
+    font-weight: bold;
+}
+
+main {
+    background-image: url("../img/background-intro.png");
+    height: calc(100vh - 100px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .container-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+main .text {
+    width: 380px;
+    color: var(--text-color);
+    font-size: 52px;
+    line-height: 70px;
+    font-weight: bold;
+}
+
+main .img img {
+    max-width: 500px;
+    height: 400px;
+}
+
+section.current-account {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #262626;
+    height: 100vh;
+}
+
+
+section.current-account .text {
+    max-width: 400px;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 80px;
+    color: var(--text-color);
+}
+
+section.current-account .text h3 {
+    color: #D9A91A;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+section.current-account .img img{
+    max-width: 500px;
+    height: 400px;
+}
+
+section.savings-account {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #D9D9D9;
+    height: 100vh;
+}
+
+section.savings-account .text {
+    max-width: 450px;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 80px;
+    color: var(--main-clor);
+}
+
+section.savings-account .text h3 {
+    color: #D9A91A;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+section.about-us {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #262626;
+    height: 100vh;
+}
+
+section.about-us .text {
+    max-width: 500px;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 80px;
+    color: var(--text-color);
+}
+
+.about-us .img img {
+    max-width: 400px;
+}
+
+section.about-us .text h3 {
+    color: #D9A91A;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+footer {
+    height: 100px;
+    background-color: var(--main-clor);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 32px;
+}
+
+.active {
+    display: flex;
+}
+
+.open-menu {
+    position: fixed;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    height: 100vh;
+    width: 450px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.open-menu form input {
+    display: block;
+}
+
+.open-menu form input, h3 {
+    color: var(--main-clor);
+}
+
+.open-menu form {
+    width: 80%;
+}
+
+.open-menu form input  {
+    width: 100%;
+}
+
+.open-menu h3 {
+    font-size: 28px;
+    text-align: center;
+    width: 80%;
+    line-height: 38px;
+    margin-bottom: 40px;
+}
+
+.open-menu form input {
+    outline: none;
+    border-bottom: 2px solid #D9D9D9;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    margin-bottom: 40px;
+}
+
+
+.open-menu form input[type='checkbox']  {
+    display: inline;
+    width: 5%;
+    margin-bottom: 0px;
+}
+
+.open-menu form input[type="submit"] {
+    padding: 10px;
+    margin-top: 40px;
+    transition: 0.5s;
+    font-size: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.open-menu form input[type="submit"]:hover {
+    background-color: var(--main-clor);
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.open-menu form a {
+    color: var(--main-clor);
+    text-decoration: underline;
+}
+
+.header-user {
+    background-color: var(--main-clor);
+    height: 100px;
+    font-size: 20px;
+}
+
+.header-user .logo {
+    font-size: 32px;
+}
+
+.intro-user {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 90%;
+    justify-content: space-between;
+}
+
+.intro-user .box1 .content {
+    margin-top: 60px;
+    width: 570px;
+    height: 140px;
+    background-color: var(--main-clor);
+    border-radius: 10px;
+}
+
+.intro-user .box1 .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    line-height: 46px;
+}
+
+.intro-user .box1 .content .account {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.intro-user .line {
+    background-color: var(--main-clor);
+    width: 3px;
+    display: block;
+    margin: 0px 20px 0px 20px;
+    height: calc(100vh - 100px);
+}
+
+.intro-user .box1 .saldo {
+    margin-top: 60px;
+    padding: 20px;
+    text-align: center;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+}
+
+.intro-user .box1 .saldo h2 {
+    color: var(--main-clor);
+}
+
+.intro-user .box1 .saldo > div {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.intro-user .box1 .saldo .content-saldo span {
+    display: block;
+    margin-top: 10px;
+    color: var(--main-clor);
+}
+
+.intro-user .box2 {
+    margin: 0 auto;
+}
+
+.intro-user .box2 .options {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 26px;
+    border-radius: 10px;
+    margin-top: 60px;
+    width: 570px;
+    background-color: var(--main-clor);
+    height: 140px;
+}
+
+
+.intro-user .box2 .options-action .withdraw {
+    display: none;
+    justify-content: center;
+    margin-top: 60px;
+    background-color: #D9D9D9;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.intro-user .box2 .withdraw form input[type='text'] {
+    border-radius: 10px;
+    padding: 5px;
+    outline: none;
+    border: 2px solid var(--main-clor);
+    color: var(--main-clor);
+}
+
+.intro-user .box2 .withdraw form label {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--main-clor);
+}
+
+.intro-user .box2 .withdraw form input[type='submit'] {
+    width: 100%;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid var(--main-clor);
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #FFB100;
+    text-align: center;
+    color: var(--main-clor);
+    cursor: pointer;
+}
+
+.intro-user .box2 .options-action .deposit {
+    display: none;
+    justify-content: center;
+    margin-top: 60px;
+    background-color: #D9D9D9;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.intro-user .box2 .deposit form label {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--main-clor);
+}
+
+.intro-user .box2 .deposit form input[type='text'] {
+    border-radius: 10px;
+    padding: 5px;
+    outline: none;
+    border: 2px solid var(--main-clor);
+    color: var(--main-clor);
+    cursor: pointer;
+}
+
+.intro-user .box2 .deposit form input[type='submit'] {
+    width: 100%;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid var(--main-clor);
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #FFB100;
+    text-align: center;
+    color: var(--main-clor);
+    cursor: pointer;
+}
+
+.login-area {
+    background-color: var(--main-clor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-area .login-container h3, label, input {
+    color: #262626;
+}
+
+.login-area .login-container {
+    background-color: #ffffff;
+    padding: 30px;
+    width: 400px;
+    height: 500px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.login-area .login-container h3 {
+    margin: 40px 0px;
+    text-align: center;
+    font-size: 26px;
+}
+
+.login-area .login-container label {
+    display: inline-block;
+    margin-bottom: 5px;
+    width: 80%;
+    text-align: start;
+}
+
+.login-area .login-container input {
+    width: 80%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+.login-area .login-container form .cpf, .password {
+    margin-bottom: 40px;
+}
+
+.login-area .login-container form input[type="submit"] {
+    width: 334px;
+    padding: 15px;
+    font-size: 20px;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.login-area .login-container form input[type="submit"]:hover {
+    background-color: #262626;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.login-area .login-container a {
+    font-weight: bold;
+    display: block;
+    margin-top: 40px;
+    color: #262626;
+}
+
+.modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7)
+}
+
+.menu-mobile {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--main-clor);
+    position: fixed;
+    display: none;
+    top: 0;
+    overflow: hidden;
+}
+
+.menu-mobile .container-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.menu-mobile ul li {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.menu-mobile ul li a {
+    color: var(--text-color);
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.menu-mobile img {
+    display: block;
+    margin: 40px auto 0px auto;
+}
+
+.open-menu-mobile {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .intro-user {
+        flex-direction: column;
+    }
+    .intro-user .line {
+        margin-top: 50px;
+        width: 100%;
+        height: 2px;
+    }
+    .intro-user .content {
+        margin: 0 auto;
+    }
+    .intro-user .saldo {
+        width: 530px;
+        margin: 0 auto;
+    }
+
+    .intro-user .box2 .options {
+        width: 570px;
+    }
+}
+
+@media (max-width: 768px) {
+    header .menu ul li a, header .buttons-header a {
+        font-size: 16px;
+    }
+
+    header .buttons-header .login img {
+        display: none;
+    }
+
+    header .buttons-header .login {
+        margin-right: 10px;
+    }
+
+    header .buttons-header .open-account {
+        padding: 5px;
+        width: 70px;
+        text-align: center;
+    }
+
+    header .menu ul li {
+        margin-left: 30px;
+    }
+
+    main .container-flex {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+    main .text {
+        width: 100%;
+    }
+    main .img {
+        width: 100%;
+    }
+    main .img img {
+        width: 100%;
+    }
+
+    .current-account .container-flex{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .savings-account .container-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-us .container-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-us .container-flex .text {
+        text-align: center;
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 425px) {
+    .header-index, .header-index .container-flex, .logo, .menu, .buttons-header {
+        display: none;
+    }
+    .header-index {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .open-menu-mobile {
+        display: block;
+    }
+
+    main .text {
+        font-size: 36px;
+    }
+    main .img img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .current-account .container-flex .text, .current-account .container-flex .text h3 {
+        font-size: 36px;
+        text-align: center;
+    }
+    .current-account .container-flex .img img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .savings-account .container-flex .text, .savings-account .container-flex .text h3 {
+        font-size: 36px;
+        text-align: center;
+    }
+    .savings-account .container-flex .img img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .about-us .container-flex .text, .about-us .container-flex .text h3 {
+        font-size: 36px;
+        text-align: center;
+    }
+    .about-us .container-flex .img img {
+        width: 200px;
+        height: 200px;
+    }
+
+    footer {
+        
+        font-size: 22px;
+    }
+    footer .logo {
+        display: block;
+    }
+
+    .login-container {
+        margin: 0 auto;
+        max-width: 200px;
+    }
+    .login-area .login-container form input[type="submit"] {
+        width: 184px;
+        cursor: pointer;
+    }
+
+    .intro-user .box1 .content {
+        margin: 50px auto;
+        width: 350px;
+        font-size: 22px;
+    }
+
+    .intro-user .box1 .saldo {
+        width: 310px;
+    }
+
+    .intro-user .box2 .options {   
+        width: 360px;
+    }
+
+    .header-user .logo {
+        display: block;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 375px) {
+    .open-menu {
+        width: 375px;
+    }
+}
+
+@media (max-width: 320px) {
+    .open-menu {
+        width: 320px;
+    }
+    
+    .intro-user .box1 .content {
+        width: 300px;
+        font-size: 20px;
+    }
+    .intro-user .box1 .saldo h2 {
+        font-size: 22px;
+    }
+    .intro-user .box1 .saldo {
+        width: 260px;
+        font-size: 20px;
+    }
+
+    .intro-user .box2 .options {
+        width: 280px;
+        font-size: 20px;
+    }
+}
